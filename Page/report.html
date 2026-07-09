@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เล่มโครงงาน</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div>
+            <img src="../image/Logo.png" alt="Logo" class="nav-logo">
+            <img src="../image/EET_logo_wo_bg.png" alt="EET-logo" class="nav-logo">
+        </div>
+        <a href="../index.html">หน้าหลัก</a>
+        <a href="IO.html">I/O Device</a>
+        <div class="dropdown">
+            <a href="Device/device.html" class="dropbtn">
+                อุปกรณ์ที่ใช้ ▼
+            </a>
+
+            <div class="dropdown-content">
+                <a href="pages/plc.html">PLC Mitsubishi FX3U</a>
+                <a href="pages/pressure_sensor.html">Pressure Sensor</a>
+                <a href="pages/flow_sensor.html">Flow Sensor</a>
+                <a href="pages/pump.html">Water Pump</a>
+                <a href="pages/solenoid.html">Solenoid Valve</a>
+            </div>
+        </div>
+        <a href="Page/Book.html" class="active">เล่มโครงงาน</a>
+        <a href="contact.html">ผู้จัดทำ</a>
+    </nav>
+
+    <header>
+        <h1>เล่มโครงงาน</h1>
+        <p>Project Report</p>
+    </header>
+
+    <div class="container">
+
+        <div class="section">
+
+            <h2>ชุดสาธิตระบบตรวจวัดและควบคุมระดับน้ำด้วย PLC FX3U</h2>
+
+            <p>
+                สามารถเปิดอ่าน ดาวน์โหลด หรือพิมพ์เล่มโครงงานได้จากหน้านี้
+            </p>
+
+            <div class="report-box">
+                <iframe
+                    src="../PDF/BUCK_EURO.pdf"
+                    width="100%"
+                    height="900px">
+                </iframe>
+
+                <div style="text-align:center;margin-top:20px;">
+                    <a href="../PDF/BUCK_EURO.pdf" class="button" download="เล่มโครงงาน">
+                    ดาวน์โหลดเล่มโครงงาน
+                    </a>
+                </div>     
+            </div>
+
+        </div>
+
+    </div>
+    
+    <footer>
+        สาขาเทคโนโลยีไฟฟ้าและอิเล็กทรอนิกส์กำลัง<br>
+        PNT29
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+
+            let currentScroll =
+                window.pageYOffset || document.documentElement.scrollTop;
+
+            if(currentScroll > lastScrollTop){
+                // เลื่อนลง ซ่อนแถบเมนู
+                navbar.style.top = "-80px";
+            }
+            else{
+                // เลื่อนขึ้น แสดงแถบเมนู
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+</body>
+</html>

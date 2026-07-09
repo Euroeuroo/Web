@@ -1,10 +1,53 @@
-body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#e2e8f0}
-header{padding:50px;text-align:center;background:linear-gradient(90deg,#1d4ed8,#0891b2)}
-.container{max-width:1100px;margin:auto;padding:25px}
-.section{background:#1e293b;border-radius:15px;padding:25px;margin-bottom:25px}
-h2{color:#38bdf8}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
-.card{background:#0f172a;padding:20px;border-radius:10px;border:1px solid #334155}
+body{
+    margin:0;
+    font-family: 'Kanit', sans-serif;
+    background:#0f172a;
+    color:#e2e8f0
+}
+
+header{
+    padding:40px;
+    text-align:center;
+    background:linear-gradient(90deg,#1d4ed8,#0891b2)
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#020617;
+    font-size: large;
+    line-height: 2;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px
+}
+
+.section{
+    background:#1e293b;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px
+}
+
+h2{
+    color:#38bdf8
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px
+}
+
+.card{
+    background:#0f172a;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #334155
+}
+
 .report-box{
     background:#0f172a;
     border:2px dashed #38bdf8;
@@ -26,8 +69,9 @@ h2{color:#38bdf8}
     background:#ffffff00;
     padding:10px;
     border-radius:50%;
-    margin-bottom:20px;
+    margin-top: 20px;
 }
+
 .card-link{
     text-decoration: none; /* เอาเส้นใต้ออก */
     color: inherit;        /* ใช้สีเดียวกับข้อความปกติ */
@@ -57,10 +101,193 @@ h2{color:#38bdf8}
     width:100px;
 }
 
-footer{
-    text-align:center;
-    padding:10px;
-    background:#020617;
-    font-size: large;
-    line-height: 2;
+/* แถบหน้า */
+    #navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;   /* เพิ่มบรรทัดนี้ */
+
+        gap: 20px;
+
+        background: rgba(15,23,42,0.95);
+        backdrop-filter: blur(10px);
+
+        padding: 8px 0;
+
+        z-index: 1000;
+    }
+
+    #navbar a{
+        color: #e2e8f0;
+        text-decoration: none;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        padding: 12px 20px;
+
+        border: 1px solid transparent;
+        border-radius: 10px;
+
+        transition: all 0.3s ease;
+    }
+
+    #navbar a:hover{
+        background: linear-gradient(
+            135deg,
+            rgba(37,99,235,0.8),
+            rgba(8,145,178,0.8)
+        );
+
+        color: white;
+
+        transform: translateY(-3px) scale(1.05);
+
+        box-shadow:
+            0 0 10px rgba(56,189,248,0.5),
+            0 0 20px rgba(56,189,248,0.3);
+    }
+
+    #navbar a.active{
+        background: linear-gradient(135deg,#2563eb,#0891b2);
+        border: 1px solid #38bdf8;
+        box-shadow: 0 0 15px rgba(56,189,248,0.5);
+
+        pointer-events: none;    /* ปิดการคลิก */
+        cursor: default;         /* เปลี่ยนเมาส์กลับเป็นลูกศร */
+    }
+
+    #navbar .nav-logo{
+        width: auto;
+        height: 45px;
+        gap: 20px;
+        background: none;
+    }
+/* ------------------------------------------------------------ */
+
+/* ตาราง */
+    table{
+        width:100%;
+        border-collapse:collapse;
+    }
+
+    th{
+        background:#2563eb;
+        color:white;
+        padding:12px;
+    }
+
+    td{
+        padding:12px;
+        border:1px solid #334155;
+    }
+
+    tr:nth-child(even){
+        background:#0f172a;
+    }
+
+    tr:nth-child(odd){
+        background:#1e293b;
+    }
+
+    tr:hover{
+        background:#334155;
+    }
+/* -------------------------------------- */
+
+.backbutton{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+
+    text-decoration: none;
+    font-size: 24px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999;
 }
+
+/* แถบตัวเลือก */
+    .dropdown{
+        position: relative;
+        display: flex;          /* เปลี่ยนจาก inline-block */
+        align-items: center;    /* จัดให้อยู่ระดับเดียวกัน */
+    }
+
+    .dropbtn{
+        display: flex;
+        align-items: center;
+
+        color: #e2e8f0;
+        text-decoration: none;
+
+        font-size: 16px;
+        font-weight: 600;
+
+        padding: 12px 20px;
+
+        border: 1px solid transparent;
+        border-radius: 10px;
+
+        transition: all 0.3s ease;
+    }
+
+    .dropbtn:hover{
+        background: rgba(56,189,248,0.15);
+        border: 1px solid #38bdf8;
+    }
+
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        min-width: 230px;
+
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+
+        z-index: 1000;
+    }
+
+    .dropdown-content a{
+        display: block;
+        padding: 12px 18px;
+
+        color: white;
+        text-decoration: none;
+
+        transition: 0.3s;
+    }
+
+    .dropdown-content a:hover{
+        background: #2563eb;
+        padding-left: 25px;
+    }
+
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+/* -------------------------------------------- */

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>อุปกรณ์ที่ใช้</title>
+
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div>
+            <img src="../../image/Logo.png" alt="Logo" class="nav-logo">
+            <img src="../../image/EET_logo_wo_bg.png" alt="EET-logo" class="nav-logo">
+        </div>
+        <a href="../../index.html">หน้าหลัก</a>
+            <a href="../IO.html">I/O Device</a>
+            
+            <div class="dropdown">
+                <a href="pages/devices.html" class="active">
+                    อุปกรณ์ที่ใช้ ▼
+                </a>
+
+                <div class="dropdown-content">
+                    <a href="pages/plc.html">PLC Mitsubishi FX3U</a>
+                    <a href="pages/pressure_sensor.html">Pressure Sensor</a>
+                    <a href="pages/flow_sensor.html">Flow Sensor</a>
+                    <a href="pages/pump.html">Water Pump</a>
+                    <a href="pages/solenoid.html">Solenoid Valve</a>
+                </div>
+            </div>
+            <a href="../report.html">เล่มโครงงาน</a>
+            <a href="../contact.html">ผู้จัดทำ</a>
+    </nav>
+
+    <header>
+        <br>
+        <h1>อุปกรณ์ที่ใช้ในโครงงาน</h1>
+        <p>Device Used in Water Level Control System</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <div class="cards">
+                <a href="plc.html" class="card-link">
+                    <div class="card">
+                        <h3>PLC Mitsubishi FX3U</h3>
+                        <p>หน่วยประมวลผลหลักของระบบ</p>
+                    </div>
+                </a>
+
+                <a href="pressure_sensor.html" class="card-link">
+                    <div class="card">
+                        <h3>Pressure Sensor</h3>
+                        <p>ตรวจวัดระดับน้ำแบบ 4-20mA</p>
+                    </div>
+                </a>
+
+                <a href="flow_sensor.html" class="card-link">
+                    <div class="card">
+                        <h3>Flow Sensor</h3>
+                        <p>วัดอัตราการไหลของน้ำ</p>
+                    </div>
+                </a>
+
+                <a href="pump.html" class="card-link">
+                    <div class="card">
+                        <h3>Water Pump</h3>
+                        <p>ปั๊มน้ำสำหรับเติมและระบายน้ำ</p>
+                    </div>
+                </a>
+
+                <a href="solenoid.html" class="card-link">
+                    <div class="card">
+                        <h3>Solenoid Valve</h3>
+                        <p>ควบคุมการเปิด-ปิดทางเดินน้ำ</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        สาขาเทคโนโลยีไฟฟ้าและอิเล็กทรอนิกส์กำลัง<br>
+        PNT29
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+
+            let currentScroll =
+                window.pageYOffset || document.documentElement.scrollTop;
+
+            if(currentScroll > lastScrollTop){
+                // เลื่อนลง ซ่อนแถบเมนู
+                navbar.style.top = "-80px";
+            }
+            else{
+                // เลื่อนขึ้น แสดงแถบเมนู
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+</body>
+</html>

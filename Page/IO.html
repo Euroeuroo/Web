@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O Device</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div>
+            <img src="../image/Logo.png" alt="Logo" class="nav-logo">
+            <img src="../image/EET_logo_wo_bg.png" alt="EET-logo" class="nav-logo">
+        </div>
+        <a href="../index.html">หน้าหลัก</a>
+        <a href="io_device.html" class="active">I/O Device</a>
+        <div class="dropdown">
+            <a href="Device/device.html" class="dropbtn">
+                อุปกรณ์ที่ใช้ ▼
+            </a>
+
+            <div class="dropdown-content">
+                <a href="pages/plc.html">PLC Mitsubishi FX3U</a>
+                <a href="pages/pressure_sensor.html">Pressure Sensor</a>
+                <a href="pages/flow_sensor.html">Flow Sensor</a>
+                <a href="pages/pump.html">Water Pump</a>
+                <a href="pages/solenoid.html">Solenoid Valve</a>
+            </div>
+        </div>
+
+        <a href="report.html">เล่มโครงงาน</a>
+        <a href="contact.html">ผู้จัดทำ</a>
+    </nav>
+
+    <header>
+        <br>
+        <h1>I/O Device</h1>
+        <p>รายการอุปกรณ์อินพุตและเอาต์พุตของระบบ</p>
+    </header>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>Digital Input</h2>
+
+            <table>
+                <tr>
+                <th>Address</th>
+                <th>Device</th>
+                <th>รายละเอียด</th>
+                </tr>
+
+                <tr>
+                <td>X0</td>
+                <td>Emergency Switch</td>
+                <td>หยุดการทำงานฉุกเฉิน</td>
+                </tr>
+
+                <tr>
+                <td>X1</td>
+                <td>Switch Selector position 1</td>
+                <td>เลือกโหมด Manual</td>
+                </tr>
+
+                <tr>
+                <td>X2</td>
+                <td>Switch Selector position 2</td>
+                <td>เลือกโหมด Auto</td>
+                </tr>
+
+                <tr>
+                <td>X3</td>
+                <td>FS1</td>
+                <td>Flow Sensor 1</td>
+                </tr>
+
+                <tr>
+                <td>X4</td>
+                <td>FS2</td>
+                <td>Flow Sensor 2</td>
+                </tr>
+
+                <tr>
+                <td>X5</td>
+                <td>PB1</td>
+                <td>Switch 1</td>
+                </tr>
+
+                <tr>
+                <td>X6</td>
+                <td>PB2</td>
+                <td>Switch 2</td>
+                </tr>
+
+                <tr>
+                <td>X7</td>
+                <td>PB3</td>
+                <td>Switch 3</td>
+                </tr>
+
+                <tr>
+                <td>X10</td>
+                <td>PB4</td>
+                <td>Switch 4</td>
+                </tr>
+
+                <tr>
+                <td>X11</td>
+                <td>PB5</td>
+                <td>Switch 5</td>
+                </tr>
+
+                <tr>
+                <td>X12</td>
+                <td>PB6</td>
+                <td>Switch 6</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Digital Output</h2>
+
+            <table>
+                <tr>
+                    <th>Address</th>
+                    <th>Device</th>
+                    <th>Description</th>
+                </tr>
+
+                <tr>
+                    <td>Y1</td>
+                    <td>Pump Relay 1</td>
+                    <td>ควบคุมรีเลย์ปั๊มน้ำตัวที่ 1</td>
+                </tr>
+
+                <tr>
+                    <td>Y2</td>
+                    <td>Pump Relay 2</td>
+                    <td>ควบคุมรีเลย์ปั๊มน้ำตัวที่ 2</td>
+                </tr>
+
+                <tr>
+                    <td>Y3</td>
+                    <td>Solenoid Valve</td>
+                    <td>ควบคุมโซลินอยด์วาล์ว</td>
+                </tr>
+
+                <tr>
+                    <td>Y4</td>
+                    <td>PL1</td>
+                    <td>Pilot Lamp 1</td>
+                </tr>
+
+                <tr>
+                    <td>Y5</td>
+                    <td>PL2</td>
+                    <td>Pilot Lamp 2</td>
+                </tr>
+
+                <tr>
+                    <td>Y6</td>
+                    <td>PL3</td>
+                    <td>Pilot Lamp 3</td>
+                </tr>
+
+                <tr>
+                    <td>Y7</td>
+                    <td>PL4</td>
+                    <td>Pilot Lamp 4</td>
+                </tr>
+
+                <tr>
+                    <td>Y10</td>
+                    <td>PL5</td>
+                    <td>Pilot Lamp 5</td>
+                </tr>
+
+                <tr>
+                    <td>Y11</td>
+                    <td>PL6</td>
+                    <td>Pilot Lamp 6</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Analog Input</h2>
+
+            <table>
+                <tr>
+                <th>Address</th>
+                <th>Device</th>
+                <th>ช่วงสัญญาณ</th>
+                </tr>
+
+                <tr>
+                <td>AD5</td>
+                <td>Pressure Sensor</td>
+                <td>4-20mA</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        สาขาเทคโนโลยีไฟฟ้าและอิเล็กทรอนิกส์กำลัง<br>
+        PNT29
+    </footer>
+    
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+
+            let currentScroll =
+                window.pageYOffset || document.documentElement.scrollTop;
+
+            if(currentScroll > lastScrollTop){
+                // เลื่อนลง ซ่อนแถบเมนู
+                navbar.style.top = "-80px";
+            }
+            else{
+                // เลื่อนขึ้น แสดงแถบเมนู
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+</body>
+</html>
