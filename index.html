@@ -2,48 +2,16 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ชุดสาธิตระบบตรวจวัดและควบคุมระดับน้ำด้วย PLC FX3U</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#e2e8f0}
-header{padding:50px;text-align:center;background:linear-gradient(90deg,#1d4ed8,#0891b2)}
-.container{max-width:1100px;margin:auto;padding:25px}
-.section{background:#1e293b;border-radius:15px;padding:25px;margin-bottom:25px}
-h2{color:#38bdf8}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
-.card{background:#0f172a;padding:20px;border-radius:10px;border:1px solid #334155}
-.report-box{
-    background:#0f172a;
-    border:2px dashed #38bdf8;
-    padding:30px;
-    text-align:center;
-    border-radius:12px;
-}
-.button{
-    display:inline-block;
-    margin-top:15px;
-    padding:12px 20px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-}
-.logo{
-    width:150px;
-    background:#ffffff00;
-    padding:10px;
-    border-radius:50%;
-    margin-bottom:20px;
-}
-footer{text-align:center;padding:20px;background:#020617}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชุดสาธิตระบบตรวจวัดและควบคุมระดับน้ำด้วย PLC FX3U</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-        <img src="Image/Logo.png" alt="โลโก้ มจพ." class="logo">
-<h1>ชุดสาธิตระบบตรวจวัดและควบคุมระดับน้ำด้วย PLC FX3U</h1>
+    <img src="image/Logo.png" alt="โลโก้ มจพ." class="logo">
+    <h1>ชุดสาธิตระบบตรวจวัดและควบคุมระดับน้ำด้วย PLC FX3U</h1>
 <p>PLC Based Water Level Control System</p>
 </header>
 
@@ -61,7 +29,11 @@ footer{text-align:center;padding:20px;background:#020617}
 <div class="section">
 <h2>อุปกรณ์ที่ใช้</h2>
 <div class="cards">
-<div class="card">PLC Mitsubishi FX3U</div>
+<a href="Page/PLC.html" class="card-link">
+    <div class="card">
+        PLC Mitsubishi FX3U
+    </div>
+</a>
 <div class="card">Pressure Sensor 4-20mA</div>
 <div class="card">Flow Sensor</div>
 <div class="card">Water Pump</div>
@@ -72,23 +44,30 @@ footer{text-align:center;padding:20px;background:#020617}
 <div class="section">
 <h2>เล่มโครงงาน</h2>
 <div class="report-box">
-<h3>Project Report Viewer</h3>
-<p>สามารถอัปโหลดหรือเชื่อมโยงไฟล์ PDF ของเล่มโครงงานเพื่อให้ผู้ใช้งานเปิดอ่านผ่านเว็บไซต์ได้</p>
-<p><b>ตัวอย่าง:</b> report/project_report.pdf</p>
-<a class="button" href="#">เปิดดูเล่มโครงงาน</a>
+<div class="section">
+    <iframe
+        src="PDF/BUCK_EURO.pdf"
+        width="100%"
+        height="800px">
+    </iframe>
+
+</div>
 </div>
 </div>
 
 <div class="section">
 <h2>ผู้จัดทำ</h2>
-<p>ชื่อผู้จัดทำ : ....................................</p>
-<p>อาจารย์ที่ปรึกษา : ....................................</p>
+<p><span class="label_name_make">ชื่อผู้จัดทำ :</span>นายอภิสิทธ์ แสงสว่าง</p>
+<p><span class="label_name_make"></span>นางสาวพนิวา ฐิตากมล</p>
+<p><span class="label_name_make"></span>นายกฤติน ประเสริฐจิตร</p>
+<p>อาจารย์ที่ปรึกษา : ผู้ช่วยศาสตราจารย์ ดร.ถิระวรรธน์ สืบธนะวงษ์</p>
 </div>
 
 </div>
 
 <footer>
-โครงงานสาขาวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์
+สาขาเทคโนโลยีไฟฟ้าและอิเล็กทรอนิกส์กำลัง<br>
+PNT29
 </footer>
 
 </body>
