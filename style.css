@@ -445,6 +445,8 @@ ul{
     /* Card */
     .cards{
         grid-template-columns: 1fr;
+        width: auto;
+        margin: 10px 0;
     }
 
     /* ตาราง */
