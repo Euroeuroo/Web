@@ -227,7 +227,7 @@
 
             if(currentScroll > lastScrollTop){
                 // เลื่อนลง ซ่อนแถบเมนู
-                navbar.style.top = "-80px";
+                navbar.style.top = `-${navbar.offsetHeight}px`;
             }
             else{
                 // เลื่อนขึ้น แสดงแถบเมนู

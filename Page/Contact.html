@@ -72,7 +72,7 @@
 
                 if(currentScroll > lastScrollTop){
                     // เลื่อนลง ซ่อนแถบเมนู
-                    navbar.style.top = "-80px";
+                    navbar.style.top = `-${navbar.offsetHeight}px`;
                 }
                 else{
                     // เลื่อนขึ้น แสดงแถบเมนู
@@ -82,34 +82,7 @@
                 lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
             });
         </script>
-
-        <script>
-            function setTheme(theme){
-
-                const root = document.documentElement;
-
-                if(theme === "light"){
-                    root.style.setProperty('--bg-color','#f8fafc');
-                    root.style.setProperty('--card-color','#ffffff');
-                    root.style.setProperty('--text-color','#0f172a');
-                    root.style.setProperty('--primary-color','#2563eb');
-                }
-
-                if(theme === "dark"){
-                    root.style.setProperty('--bg-color','#0f172a');
-                    root.style.setProperty('--card-color','#1e293b');
-                    root.style.setProperty('--text-color','#e2e8f0');
-                    root.style.setProperty('--primary-color','#38bdf8');
-                }
-
-                localStorage.setItem("theme", theme);
-            }
-
-                window.onload = function(){
-                const savedTheme = localStorage.getItem("theme") || "dark";
-                setTheme(savedTheme);
-            }
-        </script>
+        
     </body>
 
 </html>
