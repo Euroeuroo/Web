@@ -1,8 +1,15 @@
+:root{
+    --bg-color:#0f172a;
+    --card-color:#1e293b;
+    --text-color:#e2e8f0;
+    --primary-color:#38bdf8;
+}
+
 body{
     margin:0;
     font-family: 'Kanit', sans-serif;
-    background:#0f172a;
-    color:#e2e8f0
+    background:var(--bg-color);
+    color:var(--text-color)
 }
 
 header{
@@ -26,14 +33,14 @@ footer{
 }
 
 .section{
-    background:#1e293b;
+    background:var(--card-color);
     border-radius:15px;
     padding:25px;
     margin-bottom:25px
 }
 
 h2{
-    color:#38bdf8
+    color:var(--primary-color)
 }
 
 p{
@@ -57,7 +64,7 @@ ul{
 }
 
 .report-box{
-    background:#0f172a;
+    background:var(--bg-color);
     border:2px dashed #38bdf8;
     padding:30px;
     text-align:center;
@@ -117,7 +124,7 @@ ul{
         width: 100%;
 
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;   /* เพิ่มบรรทัดนี้ */
 
         gap: 20px;
@@ -377,4 +384,87 @@ ul{
 #errorMessage{
     color:#ef4444;
     margin-top:15px;
+}
+
+.theme-selector{
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.theme-color{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #888;
+    transition: 0.3s;
+}
+
+.theme-color:hover{
+    transform: scale(1.2);
+}
+
+.light{
+    background: white;
+}
+
+.dark{
+    background: #111827;
+}
+
+@media (max-width: 768px){
+
+    /* Navbar */
+    #navbar{
+        gap: 5px;
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+
+    #navbar a,
+    .dropbtn{
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    /* Header */
+    header{
+        padding: 30px 15px;
+    }
+
+    header h1{
+        font-size: 24px;
+    }
+
+    header p{
+        font-size: 14px;
+    }
+
+    /* Card */
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    /* ตาราง */
+    table{
+        font-size: 12px;
+    }
+
+    th,td{
+        padding: 8px;
+    }
+
+    /* Popup Password */
+    .modal-content{
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* รูปภาพ */
+    img{
+        max-width: 100%;
+        height: auto;
+    }
 }
