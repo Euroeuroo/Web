@@ -61,7 +61,9 @@ ul{
     background:#0f172a;
     padding:20px;
     border-radius:10px;
-    border:1px solid #334155
+    border:1px solid #334155;
+    transition:0.3s;
+    cursor:pointer;
 }
 
 .report-box{
@@ -96,15 +98,6 @@ ul{
 
 .card-link:hover{
     color: inherit;
-}
-
-.card{
-    background:#0f172a;
-    padding:20px;
-    border-radius:10px;
-    border:1px solid #334155;
-    transition:0.3s;
-    cursor:pointer;
 }
 
 .card:hover{
@@ -415,37 +408,10 @@ ul{
     background: #111827;
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
-    /* Navbar */
-    #navbar{
-        gap: 5px;
-        padding: 8px;
-        flex-wrap: wrap;
-    }
-
-    #navbar a,
-    .dropbtn{
-        font-size: 13px;
-        padding: 6px 10px;
-    }
-
-    /* Header */
-    header{
-        padding: 30px 15px;
-    }
-
-    header h1{
-        font-size: 24px;
-    }
-
-    header p{
-        font-size: 14px;
-    }
-
-    /* Card */
+    /* การ์ดอุปกรณ์ */
     .cards{
-        display: grid;
         grid-template-columns: 1fr !important;
         gap: 15px;
     }
@@ -454,24 +420,49 @@ ul{
         width: 100%;
         box-sizing: border-box;
     }
-    /* ตาราง */
-    table{
-        font-size: 12px;
+
+    /* Container */
+    .container{
+        padding: 10px;
     }
 
-    th,td{
-        padding: 8px;
+    .section{
+        padding: 15px;
     }
 
-    /* Popup Password */
-    .modal-content{
-        width: 90%;
-        padding: 20px;
+    /* Header */
+    header{
+        padding: 80px 15px 25px 15px;
     }
 
-    /* รูปภาพ */
-    img{
-        max-width: 100%;
-        height: auto;
+    header h1{
+        font-size: 28px;
+    }
+
+    header p{
+        font-size: 16px;
+    }
+
+    /* Navbar */
+    #navbar{
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 6px 10px;
+    }
+
+    #navbar a{
+        font-size: 13px;
+        padding: 8px 12px;
+        flex-shrink: 0;
+    }
+
+    /* โลโก้ */
+    #navbar .nav-logo{
+        height: 32px;
+        flex-shrink: 0;
     }
 }
+    
+ 
