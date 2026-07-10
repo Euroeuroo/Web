@@ -30,8 +30,8 @@
                 <a href="pages/solenoid.html">Solenoid Valve</a>
             </div>
         </div>
-        <a href="Page/report.html">เล่มโครงงาน</a>
-        <a href="pages/contact.html">ผู้จัดทำ</a>
+        <a href="#" onclick="openModal()">เล่มโครงงาน</a>
+        <a href="Page/Contact.html">ผู้จัดทำ</a>
     </nav>
 
     <header>
@@ -79,6 +79,25 @@
         PNT29
     </footer>
 
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>🔒 เข้าถึงเล่มโครงงาน</h2>
+
+            <p>กรุณาใส่รหัสผ่านเพื่อเข้าใช้งาน</p>
+
+            <input type="password"
+                id="passwordInput"
+                placeholder="Password">
+
+            <div class="button-group">
+                <button onclick="checkPassword()">เข้าสู่ระบบ</button>
+                <button onclick="closeModal()">ยกเลิก</button>
+            </div>
+
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+    
     <script>
         let lastScrollTop = 0;
         const navbar = document.getElementById("navbar");
@@ -100,5 +119,34 @@
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         });
     </script>
+
+    <script>
+
+        function openModal(){
+            document.getElementById("passwordModal").style.display = "flex";
+        }
+
+        function closeModal(){
+            document.getElementById("passwordModal").style.display = "none";
+            document.getElementById("errorMessage").innerHTML = "";
+        }
+
+        function checkPassword(){
+
+            const password =
+                document.getElementById("passwordInput").value;
+
+            if(password === "1234"){
+                window.location.href = "Page/report.html";
+            }
+            else{
+                document.getElementById("errorMessage").innerHTML =
+                    "รหัสผ่านไม่ถูกต้อง";
+            }
+
+    }
+
+</script>
+</script>
 </body>
 </html>

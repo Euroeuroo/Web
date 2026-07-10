@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>เล่มโครงงาน</title>
+
+        <link rel="stylesheet" href="../style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <nav id="navbar">
+            <div>
+                <img src="../image/Logo.png" alt="Logo" class="nav-logo">
+                <img src="../image/EET_logo_wo_bg.png" alt="EET-logo" class="nav-logo">
+            </div>
+
+            <a href="../index.html">หน้าหลัก</a>
+            <a href="IO.html">I/O Device</a>
+
+            <div class="dropdown">
+                <a href="Device/device.html" class="dropbtn">
+                    อุปกรณ์ที่ใช้ ▼
+                </a>
+
+                <div class="dropdown-content">
+                    <a href="pages/plc.html">PLC Mitsubishi FX3U</a>
+                    <a href="pages/pressure_sensor.html">Pressure Sensor</a>
+                    <a href="pages/flow_sensor.html">Flow Sensor</a>
+                    <a href="pages/pump.html">Water Pump</a>
+                    <a href="pages/solenoid.html">Solenoid Valve</a>
+                </div>
+            </div>
+
+            <a href="report.html">เล่มโครงงาน</a>
+            <a href="contact.html" class="active">ผู้จัดทำ</a>
+            
+        </nav>
+
+        <header>
+            <br>
+            <h1>ผู้จัดทำ</h1>
+        </header>
+
+        <div class="container"> 
+            <div class="section">
+                <h2>ผู้จัดทำ</h2>
+                <p style="margin-left: 20px;">นายอภิสิทธ์ แสงสว่าง</p>
+                <p style="margin-left: 20px;">นางสาวพนิวา ฐิตากมล</p>
+                <p style="margin-left: 20px;">นายกฤติน ประเสริฐจิตร</p>
+            </div>
+        
+            <div class="section">
+                <h2>อาจารย์ที่ปรึกษา</h2>
+                <p style="margin-left: 20px;"> ผู้ช่วยศาสตราจารย์ ดร.ถิระวรรธน์ สืบธนะวงษ์</p>
+            </div>
+        </div>
+
+        <script>
+            let lastScrollTop = 0;
+            const navbar = document.getElementById("navbar");
+
+            window.addEventListener("scroll", function() {
+
+                let currentScroll =
+                    window.pageYOffset || document.documentElement.scrollTop;
+
+                if(currentScroll > lastScrollTop){
+                    // เลื่อนลง ซ่อนแถบเมนู
+                    navbar.style.top = "-80px";
+                }
+                else{
+                    // เลื่อนขึ้น แสดงแถบเมนู
+                    navbar.style.top = "0";
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        </script>
+    </body>
+
+</html>
