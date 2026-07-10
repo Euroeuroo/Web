@@ -444,11 +444,15 @@ ul{
 
     /* Card */
     .cards{
-        grid-template-columns: 1fr;
-        width: auto;
-        margin: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 15px;
     }
 
+    .card{
+        width: 100%;
+        box-sizing: border-box;
+    }
     /* ตาราง */
     table{
         font-size: 12px;
