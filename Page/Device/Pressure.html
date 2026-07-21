@@ -1,0 +1,115 @@
+2<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Sensing Technologies</title>
+
+    <link rel="icon" type="image.png" href="../../image/Logo.png">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div>
+            <img src="../../image/Logo.png" alt="Logo" class="nav-logo">
+            <img src="../../image/EET_logo_wo_bg.png" alt="EET-logo" class="nav-logo">
+        </div>
+        <a href="../../index.html">หน้าหลัก</a>
+            <a href="../IO.html">I/O Device</a>
+            
+            <div class="dropdown">
+                <a href="device.html" class="active">
+                    อุปกรณ์ที่ใช้ ▼
+                </a>
+
+                <div class="dropdown-content">
+                    <a href="PLC.html">PLC Mitsubishi FX3U</a>
+                    <a href="Pressure.html">Level Sensor</a>
+                    <a href="Flowsensor.html">Flow Sensor</a>
+                    <a href="pages/pump.html">Water Pump</a>
+                    <a href="pages/solenoid.html">Solenoid Valve</a>
+                </div>
+            </div>
+            <a href="../report.html">เล่มโครงงาน</a>
+            <a href="../Contact.html">ผู้จัดทำ</a>
+
+    </nav>
+
+    <header>
+        <br>
+        <h1>Level Sensing Technologies</h1>
+    </header>
+
+    <div class="container">
+        <div class="section"> 
+            <h2>Hydrostatic Pressure Transmitter</h2>
+            <img src="../../image/sensor.png" alt="PLC" style=" 
+                display:block;
+                margin:20px auto;
+                width:350px;
+                max-width:100%;
+                border-radius:15px;">
+            <p style="text-align: justify;">อาศัยหลักการความสัมพันธ์ระหว่างความดันที่ก้นถังกับความสูงของของเหลวดังกฎของปาสคาลว่าความดันที่จุดใดๆในของเหลวที่หยุดนิ่งจะแปรผันตามความลึก</p>
+            
+            <p>$$P=ρgh$$</p>
+
+            <p>P คือ ความดัน</p>
+            <p>ρ คือ ความหนาแน่นของของเหลว</p>
+            <p>g คือ แรงโน้มถ่วง</p>
+            <p>h คือ ความสูงของระดับน้ำ</p>
+        </div>
+
+        <div class="section">
+            <h2>Electrode Type Level Switch</h2>
+            <img src="../../image/EleSensor.png" alt="PLC" style=" 
+                display:block;
+                margin:20px auto;
+                width:350px;
+                max-width:100%;
+                border-radius:15px;">
+            <p style="text-align: justify;">เซนเซอร์ใช้หลักการตรวจจับการนำไฟฟ้าของของเหลว เมื่อระดับของเหลวสูงจนสัมผัสก้านอิเล็กโทรดที่ระหว่างก้านวัดและก้านอ้างอิงทำให้ครบวงจรไฟฟ้าทำให้วงจรภายในของตัวควบคุมตรวจจับสถานะของเหลวได้ </p>
+            <p style="text-align: justify;">เซนเซอร์ชนิดนี้ใช้สำหรับการตรวจจับระดับแบบจุด เช่น ระดับต่ำ ระดับสูง หรือระดับ แต่อย่างไรก็ตามเซนเซอร์ชนิดนี้สามารถใช้งานได้เฉพาะกับของเหลวที่นำไฟฟ้าได้เท่านั้น เช่น น้ำประปา น้ำเสีย หรือสารละลายต่าง ๆ และไม่เหมาะกับของเหลวที่ไม่นำไฟฟ้า เช่น น้ำมัน หรือน้ำกลั่นบริสุทธิ์</p>
+        </div>
+
+        <div class="section">
+            <h2>Float Switch</h2>   
+            <img src="../../image/Float.png" alt="PLC" style=" 
+                display:block;
+                margin:20px auto;
+                width:350px;
+                max-width:100%;
+                border-radius:15px;">
+            <p style="text-align: justify;">เป็นอุปกรณ์วัดระดับแบบเชิงกลที่อาศัยแรงลอยตัวของของเหลว โดยภายในมีสวิตช์และลูกบอลโลหะเมื่อลูกลอยขึ้นตามระดับน้ำจะทำให้หน้าสัมผัสเปลี่ยนสภาวะ</p>
+        </div>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+
+            let currentScroll =
+                window.pageYOffset || document.documentElement.scrollTop;
+
+            if(currentScroll > lastScrollTop){
+                // เลื่อนลง ซ่อนแถบเมนู
+                navbar.style.top = `-${navbar.offsetHeight}px`;
+            }
+            else{
+                // เลื่อนขึ้น แสดงแถบเมนู
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC Mitsubishi FX3U</title>
+
+    <link rel="icon" type="image.png" href="../../image/Logo.png">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div>
+            <img src="../../image/Logo.png" alt="Logo" class="nav-logo">
+            <img src="../../image/EET_logo_wo_bg.png" alt="EET-logo" class="nav-logo">
+        </div>
+        <a href="../../index.html">หน้าหลัก</a>
+            <a href="../IO.html">I/O Device</a>
+            
+            <div class="dropdown">
+                <a href="device.html" class="active">
+                    อุปกรณ์ที่ใช้ ▼
+                </a>
+
+                <div class="dropdown-content">
+                    <a href="PLC.html">PLC Mitsubishi FX3U</a>
+                    <a href="Pressure.html">Level Sensor</a>
+                    <a href="Flowsensor.html">Flow Sensor</a>
+                    <a href="pages/pump.html">Water Pump</a>
+                    <a href="pages/solenoid.html">Solenoid Valve</a>
+                </div>
+            </div>
+            <a href="../report.html">เล่มโครงงาน</a>
+            <a href="../Contact.html">ผู้จัดทำ</a>
+
+    </nav>
+
+    <header>
+        <br>
+        <h1>PLC Mitsubishi FX3U</h1>
+        <p>Main Controller of Water Level Control System</p>
+    </header>
+
+    <div class="container">
+        <div class="section"> 
+            <h2>PLC FX3U</h2>
+            <img src="../../image/FX3U.png" alt="PLC" style=" 
+                display:block;
+                margin:20px auto;
+                width:350px;
+                max-width:100%;
+                border-radius:15px;">
+        <p>This PLC is RS232 communication by default 38400 bps.</p>
+        <p>Add RS485 communication </p>
+        <p>Add RTC means real time clock.</p>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>FX3U</th>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>Relay</td>
+            </tr>
+            <tr>
+                <td>Input Voltage</td>
+                <td>24V DC</td>
+            </tr>
+            <tr>
+                <td>Output Current</td>
+                <td>5A</td>
+            </tr>
+            <tr>
+                <td>Input Point</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Output Point</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Analog Input</td>
+                <td>6AD</td>
+            </tr>
+            <tr>
+                <td>Analog Output</td>
+                <td>2DA</td>
+            </tr>
+            <tr>
+                <td>High Speed Count</td>
+                <td>6 channels 3K (2 channels 60K optional)</td>
+            </tr>
+            <tr>
+                <td>Pulse Output</td>
+                <td>Do not have</td>
+            </tr>
+            <tr>
+                <td>Floating Point</td>
+                <td>Support</td>
+            </tr>
+            <tr>
+                <td>Step Motor</td>
+                <td>Not support</td>
+            </tr>
+            <tr>
+                <td>Memory Capacity</td>
+                <td>8000 steps</td>
+            </tr>
+            <tr>
+                <td>Load Type</td>
+                <td>Direct Download</td>
+            </tr>
+            <tr>
+                <td>RS485</td>
+                <td>Support</td>
+            </tr>
+            <tr>
+                <td>MODBUS</td>
+                <td>Support</td>
+            </tr>
+            <tr>
+                <td>Support Message Display</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Support HMI Touch Screen</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Software</td>
+                <td>GX Developer or GX Works2</td>
+            </tr>
+        </table>
+        </div>
+        
+        <div class="section">
+            <table>
+                <tr>
+                    <td>Input Power</td>
+                    <td>DC24</td>
+                </tr>
+                <tr>
+                    <td>Number of Steps</td>
+                    <td>
+                        8000 steps;<br>
+                        2 communication ports:<br>
+                        1 RS232 (DB9 serial port is communication port for FX3U protocol 38400,7,E,1;<br>
+                        1 RS485 (485 option) communication protocol can be set to D8120).
+                    </td>
+                </tr>
+                <tr>
+                    <td>X Input Element</td>
+                    <td>
+                        DC24, X0-X27 input level X0-X5 high-speed counting input port
+                        (default is 12K)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Y Element Output</td>
+                    <td>
+                        Y0-Y3 transistor output, output current 500mA, plus diode can achieve 4A,
+                        100K 4 channel pulse output.<br>
+                        Y4-Y11 common transistor output can be directly driven 3A 24V load.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Analog Input</td>
+                    <td>
+                        6 Analog input, 12 Bit Precision,<br>
+                        A0-AD2 : 0-10V<br>
+                        A3-AD5 : 0-20mA<br>
+                        Read Analog RD3A Official Instructions
+                    </td>
+                </tr>
+                <tr>
+                    <td>Analog Output</td>
+                    <td>
+                        2 Analog Output, 12 Bit Precision,<br>
+                        Voltage Output : 0-10V Analog Output Voltage WR3A Instructions
+                    </td>
+                </tr>
+                <tr>
+                    <td>Intermediate Relay M</td>
+                    <td>
+                        M0-M3071,<br>
+                        Power loss scope can be set to save power.<br>
+                        Range M0-M1023
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stepper Point S</td>
+                    <td>
+                        S0-S1023,<br>
+                        Power Down save range can be set S0-S1023,<br>
+                        Default is S500-S999.
+                    </td>
+                </tr>
+                <tr>
+                    <td>100MS Timer</td>
+                    <td>
+                        T0-T199,<br>
+                        Cumulative Power Down Record T184-T199
+                    </td>
+                </tr>
+                <tr>
+                    <td>10MS Timer</td>
+                    <td>
+                        T200-T249,<br>
+                        Cumulative Power Down Record T246-T249
+                    </td>
+                </tr>
+                <tr>
+                    <td>1MS Timer</td>
+                    <td>
+                        T250-T383,<br>
+                        T250-T255 are collector type.
+                    </td>
+                </tr>
+                <tr>
+                    <td>16-bit Counter</td>
+                    <td>
+                        C0-C199,<br>
+                        Power Down Record C100-C199
+                    </td>
+                </tr>
+                <tr>
+                    <td>32-bit Counter</td>
+                    <td>
+                        C200-C219,<br>
+                        Power Down Save C220-C234
+                    </td>
+                </tr>
+                <tr>
+                    <td>High Speed 32-bit Counter</td>
+                    <td>
+                        C235-C255:<br>
+                        C235-C240 for single-phase counter, non harmonic;<br>
+                        C241-C240 single-phase frequency counter doubling;<br>
+                        C247-C249 Dual Phase Counter, Non harmonic;<br>
+                        C250-C252 for 2-Phase doubling frequency counter;<br>
+                        C253-C255 biphasic counter, 4 doubling frequency;
+                    </td>
+                </tr>
+                <tr>
+                    <td>Register D</td>
+                    <td>
+                        D0-D7999,<br>
+                        Power-Down Record Range can be set to D0-D7999
+                    </td>
+                </tr>
+                <tr>
+                    <td>Indirect Addressing Pointers V, Z</td>
+                    <td>
+                        V0-V7, Z0-Z7
+                    </td>
+                </tr>
+                <tr>
+                    <td>P Subroutine JUMP Number</td>
+                    <td>
+                        P0-P63
+                    </td>
+                </tr>
+                <tr>
+                    <td>I Interrupt</td>
+                    <td>
+                        X0-X5 External Interrupt.<br>
+                        Timing Interrupt (1MS units) Timing Interrupt.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Special M Element</td>
+                    <td>
+                        M8000 Work Normally Closed,<br>
+                        M8002 Power Pulse,<br>
+                        M8011 10MS Pulse,<br>
+                        M8012 100MS Pulse,<br>
+                        M8013 1S Pulse,<br>
+                        M8014 1MIN Pulse
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+
+            let currentScroll =
+                window.pageYOffset || document.documentElement.scrollTop;
+
+            if(currentScroll > lastScrollTop){
+                // เลื่อนลง ซ่อนแถบเมนู
+                navbar.style.top = `-${navbar.offsetHeight}px`;
+            }
+            else{
+                // เลื่อนขึ้น แสดงแถบเมนู
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+
+</body>
+</html>
